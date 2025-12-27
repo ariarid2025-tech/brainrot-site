@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brainrot Generator</title>
+  <title>Brainrot AI Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="matrix"></canvas>
 
-  <div class="container">
-    <!-- Left panel: controls -->
-    <div class="left-panel">
-      <h1>🧠 Brainrot Generator</h1>
-      <button id="genBtn">Generate Prompt</button>
-      <button id="copyBtn">Copy Prompt</button>
-      <a id="download" download>Download Prompt</a>
-    </div>
+<canvas id="matrix"></canvas>
 
-    <!-- Right panel: display -->
-    <div class="right-panel">
-      <div class="prompt-box">
-        <p id="status">Your prompt will appear here</p>
-      </div>
-      <div class="video-box">
-        <video id="video" controls></video>
-      </div>
-    </div>
+<div id="app">
+
+  <!-- LEFT PANEL -->
+  <div id="left-panel">
+    <h1>🧠 Brainrot AI</h1>
+
+    <button id="genBtn">Generate Prompt</button>
+    <button id="copyBtn">COPY</button>
+    <button id="aiBtn">OPEN AI</button>
   </div>
 
-  <script src="script.js"></script>
+  <!-- RIGHT PANEL -->
+  <div id="right-panel">
+    <h2>Prompt</h2>
+    <div id="promptBox">Click Generate</div>
+  </div>
+
+</div>
+
+<!-- AI GENERATOR PANEL -->
+<div id="ai-panel">
+  <iframe
+    src="https://firefly.adobe.com/generate/video"
+    title="Adobe Firefly AI"
+    allow="clipboard-write"
+  ></iframe>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
