@@ -40,9 +40,8 @@ setInterval(drawMatrix, 33);
 window.addEventListener("resize", resize);
 
 // BUTTON PLACEHOLDER
+// BUTTON PLACEHOLDER
 document.getElementById("genBtn").onclick = () => {
-  const video = document.getElementById("video");
-  const download = document.getElementById("download");
   const status = document.getElementById("status");
 
   // Array of random brainrot prompts
@@ -57,18 +56,6 @@ document.getElementById("genBtn").onclick = () => {
   // Pick a random prompt
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
 
-  // Placeholder video (same video for now)
-  const videoUrl = "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4";
-
-
-  // Update video
-  video.src = videoUrl;
-  video.play();
-
-  // Update download link
-  download.href = videoUrl;
-  download.style.display = "block";
-
-  // Show prompt
-  status.innerText = `Prompt: ${prompt} | Video ready!`;
+  // Update the status text
+  status.innerText = `Prompt: ${prompt}`;
 };
