@@ -1,102 +1,135 @@
 * {
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: "Courier New", monospace;
 }
 
 body {
   margin: 0;
   background: black;
-  color: #00ffcc;
+  color: #00ff66;
   overflow: hidden;
 }
 
-/* MATRIX BACKGROUND */
-#matrix {
+/* MATRIX RAIN */
+canvas {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: -1;
 }
 
-/* MAIN APP */
-#app {
-  display: flex;
-  height: 100vh;
+/* HEADER */
+header {
+  text-align: center;
+  font-size: 40px;
   padding: 20px;
+  letter-spacing: 4px;
+}
+
+.sub {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* MAIN LAYOUT */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  padding: 20px;
 }
 
 /* PANELS */
-#left-panel, #right-panel {
-  background: rgba(0, 0, 0, 0.85);
-  border: 2px solid #00ffcc;
-  border-radius: 20px;
+.panel {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid #00ff66;
+  border-radius: 16px;
   padding: 20px;
 }
 
-/* LEFT */
-#left-panel {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.panel h2 {
+  margin-top: 0;
+  font-size: 16px;
 }
 
-/* RIGHT */
-#right-panel {
-  width: 65%;
+/* INPUTS */
+label {
+  display: block;
+  margin-top: 15px;
 }
 
-#promptBox {
-  background: #050505;
-  border: 2px solid #00ffcc;
-  border-radius: 15px;
-  padding: 15px;
-  font-size: 1.1em;
-  min-height: 150px;
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  background: black;
+  border: 1px solid #00ff66;
+  color: #00ff66;
+  border-radius: 10px;
 }
 
-/* BUTTONS */
-button {
+/* STYLE BUTTONS */
+.styles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.style {
+  padding: 10px;
+  border-radius: 10px;
+  background: black;
+  border: 1px solid #00ff66;
+  color: #00ff66;
+}
+
+.style.active {
+  background: #00ff66;
+  color: black;
+}
+
+/* EXECUTE */
+.execute {
+  margin-top: 20px;
+  width: 100%;
   padding: 18px;
-  font-size: 1.1em;
-  font-weight: bold;
-  border-radius: 18px;
+  font-size: 18px;
+  background: #00ff66;
+  color: black;
+  border: none;
+  border-radius: 14px;
+}
+
+/* OUTPUT */
+pre {
+  white-space: pre-wrap;
+  min-height: 300px;
+}
+
+/* AI CONTROL */
+.ai-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.ai-control button {
+  padding: 15px 18px;
+  font-size: 14px;
+  border-radius: 14px;
   border: none;
   cursor: pointer;
 }
 
-#genBtn {
-  background: linear-gradient(90deg, #00ffcc, #00ff66);
+#copy {
+  background: #00ffcc;
   color: black;
 }
 
-#copyBtn {
-  background: #6aff00;
-  color: black;
-}
-
-#aiBtn {
-  background: #8b5cff;
+#firefly {
+  background: #9b5cff;
   color: white;
 }
 
-/* AI PANEL */
-#ai-panel {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  width: 360px;
-  height: 500px;
-  border-radius: 20px;
-  border: 3px solid #8b5cff;
-  background: black;
-  overflow: hidden;
-  z-index: 10;
-}
-
-#ai-panel iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
