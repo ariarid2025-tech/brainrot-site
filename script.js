@@ -58,7 +58,8 @@ document.getElementById("genBtn").onclick = () => {
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
 
   // Placeholder video (same video for now)
-  const videoUrl = "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4";
+  const videoUrl = "https://sample-videos.com/video123/mp4/240/big_buck_bunny_240p_1mb.mp4";
+
 
   // Update video
   video.src = videoUrl;
