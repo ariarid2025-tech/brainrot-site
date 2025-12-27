@@ -43,13 +43,31 @@ window.addEventListener("resize", resize);
 document.getElementById("genBtn").onclick = () => {
   const video = document.getElementById("video");
   const download = document.getElementById("download");
+  const status = document.getElementById("status");
 
-  // Placeholder video URL
+  // Array of random brainrot prompts
+  const prompts = [
+    "AI cats doing the cha-cha",
+    "Glitchy neon frogs dancing in space",
+    "Pixelated spaghetti with a disco ball",
+    "Dancing toaster in a cyberpunk city",
+    "Robot puppies playing jazz on a rainbow"
+  ];
+
+  // Pick a random prompt
+  const prompt = prompts[Math.floor(Math.random() * prompts.length)];
+
+  // Placeholder video (same video for now)
   const videoUrl = "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4";
 
-  video.src = videoUrl;      // Load the video
-  video.play();               // Auto-play
-  download.href = videoUrl;   // Set download link
-  download.style.display = "block"; // Show download button
-  document.getElementById("status").innerText = "Video ready!";
+  // Update video
+  video.src = videoUrl;
+  video.play();
+
+  // Update download link
+  download.href = videoUrl;
+  download.style.display = "block";
+
+  // Show prompt
+  status.innerText = `Prompt: ${prompt} | Video ready!`;
 };
