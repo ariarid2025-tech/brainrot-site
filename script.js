@@ -40,11 +40,9 @@ setInterval(drawMatrix, 33);
 window.addEventListener("resize", resize);
 
 // BUTTON PLACEHOLDER
-// BUTTON PLACEHOLDER
 document.getElementById("genBtn").onclick = () => {
   const status = document.getElementById("status");
 
-  // Array of random brainrot prompts
   const prompts = [
     "AI cats doing the cha-cha",
     "Glitchy neon frogs dancing in space",
@@ -53,9 +51,10 @@ document.getElementById("genBtn").onclick = () => {
     "Robot puppies playing jazz on a rainbow"
   ];
 
-  // Pick a random prompt
   const prompt = prompts[Math.floor(Math.random() * prompts.length)];
 
-  // Update the status text
   status.innerText = `Prompt: ${prompt}`;
+  
+  // Keep the video hidden for now
+  document.getElementById("video").style.display = "none";
 };
