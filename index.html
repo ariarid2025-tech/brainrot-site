@@ -2,42 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brainrot AI Generator</title>
+  <title>BRAINROT_GENERATOR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<canvas id="matrix"></canvas>
+<canvas id="rain"></canvas>
 
-<div id="app">
+<header>
+  BRAINROT_GENERATOR
+  <div class="sub">INITIALIZING AI CORE… READY TO GENERATE VIRAL CONTENT</div>
+</header>
 
+<main>
   <!-- LEFT PANEL -->
-  <div id="left-panel">
-    <h1>🧠 Brainrot AI</h1>
+  <section class="panel left">
+    <h2>INPUT_PARAMETERS.exe</h2>
 
-    <button id="genBtn">Generate Prompt</button>
-    <button id="copyBtn">COPY</button>
-    <button id="aiBtn">OPEN AI</button>
-  </div>
+    <label>Target Topic</label>
+    <input id="topic" placeholder="e.g. Skibidi Toilet takeover">
+
+    <label>Content Style</label>
+    <div class="styles">
+      <button class="style active">Brainrot</button>
+      <button class="style">Cat Video</button>
+      <button class="style">Hacker</button>
+      <button class="style">Viral</button>
+      <button class="style">ASMR</button>
+      <button class="style">Minecraft Parkour</button>
+    </div>
+
+    <button id="generate" class="execute">
+      EXECUTE_GENERATE()
+    </button>
+  </section>
 
   <!-- RIGHT PANEL -->
-  <div id="right-panel">
-    <h2>Prompt</h2>
-    <div id="promptBox">Click Generate</div>
-  </div>
+  <section class="panel right">
+    <h2>SYSTEM_OUTPUT.exe</h2>
+    <pre id="output">WAITING FOR INPUT...
+SYSTEM IDLE</pre>
+  </section>
+</main>
 
-</div>
-
-<!-- AI GENERATOR PANEL -->
-<div id="ai-panel">
-  <iframe
-    src="https://firefly.adobe.com/generate/video"
-    title="Adobe Firefly AI"
-    allow="clipboard-write"
-  ></iframe>
+<!-- BOTTOM RIGHT AI CONTROL -->
+<div class="ai-control">
+  <button id="copy">COPY PROMPT</button>
+  <button id="firefly">OPEN ADOBE FIREFLY</button>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
