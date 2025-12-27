@@ -41,5 +41,15 @@ window.addEventListener("resize", resize);
 
 // BUTTON PLACEHOLDER
 document.getElementById("genBtn").onclick = () => {
-  document.getElementById("status").innerText = "Backend not connected yet.";
+  const video = document.getElementById("video");
+  const download = document.getElementById("download");
+
+  // Placeholder video URL
+  const videoUrl = "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4";
+
+  video.src = videoUrl;      // Load the video
+  video.play();               // Auto-play
+  download.href = videoUrl;   // Set download link
+  download.style.display = "block"; // Show download button
+  document.getElementById("status").innerText = "Video ready!";
 };
