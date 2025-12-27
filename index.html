@@ -1,19 +1,33 @@
-<!DOCTYPE html>ml>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Brainrot Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <canvas id="matrix"></canvas>
 
-  <h1>🧠 Brainrot Generator</h1>
-  <button id="genBtn">Generate Video</button>
-  <p id="status"></p>
+  <div class="container">
+    <!-- Left panel: controls -->
+    <div class="left-panel">
+      <h1>🧠 Brainrot Generator</h1>
+      <button id="genBtn">Generate Prompt</button>
+      <button id="copyBtn">Copy Prompt</button>
+      <a id="download" download>Download Prompt</a>
+    </div>
 
-  <video id="video" controls></video>
-  <a id="download" download style="display:none">Download Video</a>
+    <!-- Right panel: display -->
+    <div class="right-panel">
+      <div class="prompt-box">
+        <p id="status">Your prompt will appear here</p>
+      </div>
+      <div class="video-box">
+        <video id="video" controls></video>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
